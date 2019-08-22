@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <meta charset="utf-8" />
+    <title>JavaScript Load Image</title>
+    <meta
+      name="description"
+      content="JavaScript Load Image is a library to load images provided as File or Blob objects or via URL. It returns an optionally scaled and/or cropped HTML img or canvas element. It also provides methods to parse image meta data to extract IPTC and Exif tags as well as embedded thumbnail images and to restore the complete image header after resizing."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Jcrop is not required by JavaScript Load Image, but included for the demo
+    -->
+    <link rel="stylesheet" href="../static/css/vendor/jquery.Jcrop.css" />
+    <link rel="stylesheet" href="../static/css/demo.css" />
+  </head>
+  <body>
+    <h1>Diabetic and gloucoma detection</h1>
+    <h4>using deep learning</h4>
+
+    <h2>Select an image file</h2>
+
+    <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data" >
+          <p><input type="file" name="file" id="file-input" /></p>
+          <p>Or <strong>drag &amp; drop</strong> an image file onto this webpage.</p>
+          <h2>Result</h2>
+
+          <div id="result">
+            <p>
+              This demo works only in browsers with support for the
+              <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a> or
+              <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a>
+              API.
+            </p>
+          </div>
+          <div>
+
+        <input type = "submit"/>
+
+        </form>
+	<h3>Your Diagnose is:</h3>
+	<p id="output"></p>
+    </div>
+
+
+    <script src="../static/js/load-image.js"></script>
+    <script src="../static/js/vendor/jquery.js"></script>
+    <script src="../static/js/vendor/jquery.Jcrop.js"></script>
+    <script src="../static/js/demo/demo.js"></script>
+  </body>
+</html>
